@@ -161,11 +161,12 @@ export default function EditLoaner({ loaners, onSaved, onDeleted, onToast }){
             onChange={(e) => set("location")(e.target.value)}
           />
         </Field>
-        <DateInput
+        <Field> <DateInput
           label="Date Last Serviced"
           value={form.dateLastServiced}
           onChange={set("dateLastServiced")}
-        />
+        /></Field>
+      
       </div>
 
       <ScannerModal

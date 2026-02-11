@@ -46,7 +46,7 @@ export default function Login({ onAuthed, onToast }){
       <div className="spread">
         <div>
           <div style={{fontWeight:900, fontSize:22}}>{mode === "login" ? "Sign in" : "Create account"}</div>
-          <div style={{color:"var(--muted)", marginTop:6}}>Works great as a link on GitHub Pages — installable as a PWA.</div>
+          <div style={{color:"var(--muted)", marginTop:6}}>Keep track of your instrument inventory</div>
         </div>
         <button className="btn" onClick={() => setMode(mode === "login" ? "register" : "login")}>
           {mode === "login" ? "Create account" : "Back to login"}
@@ -80,7 +80,7 @@ export default function Login({ onAuthed, onToast }){
       </div>
 
       <div style={{marginTop:10, color:"var(--muted)", fontSize:12}}>
-        Tip: Passwords are not stored in the browser. (Your backend currently stores them in MongoDB as plaintext.)
+       Tip: Never reuse a password. Use a unique password only!
       </div>
     </div>
   );
