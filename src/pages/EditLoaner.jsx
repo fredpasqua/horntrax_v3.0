@@ -83,17 +83,41 @@ export default function EditLoaner({ loaners, onSaved, onDeleted, onToast }){
   }
 
   return (
-    <div className="card" style={{padding:16}}>
+    <div className="card" style={{ padding: 16 }}>
       <div className="spread">
         <div>
-          <div style={{fontWeight:900, fontSize:20}}>Edit Loaner</div>
-          <div style={{color:"var(--muted)", marginTop:6}}>ID: {item._id}</div>
+          <div style={{ fontWeight: 900, fontSize: 20 }}>Edit Loaner</div>
+          <div style={{ color: "var(--muted)", marginTop: 6 }}>
+            ID: {item._id}
+          </div>
         </div>
         <div className="row">
-          <button className="btn" onClick={() => nav("/")}>Back</button>
-          <button className="btn" onClick={() => setOpenScan(true)}>Scan</button>
-          <button className="btn danger" onClick={del} disabled={busy}>Delete</button>
-          <button className="btn primary" onClick={save} disabled={busy}>{busy ? "Saving..." : "Save changes"}</button>
+          <button type="button" className="btn" onClick={() => nav("/")}>
+            Back
+          </button>
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setOpenScan(true)}
+          >
+            Scan
+          </button>
+          <button
+            type="button"
+            className="btn danger"
+            onClick={del}
+            disabled={busy}
+          >
+            Delete
+          </button>
+          <button
+            type="button"
+            className="btn primary"
+            onClick={save}
+            disabled={busy}
+          >
+            {busy ? "Saving..." : "Save changes"}
+          </button>
         </div>
       </div>
 
@@ -101,24 +125,54 @@ export default function EditLoaner({ loaners, onSaved, onDeleted, onToast }){
 
       <div className="grid cols2">
         <Field label="Instrument Type" error={errors.type}>
-          <input className="input" value={form.type} onChange={(e)=>set("type")(e.target.value)} />
+          <input
+            className="input"
+            value={form.type}
+            onChange={(e) => set("type")(e.target.value)}
+          />
         </Field>
         <Field label="Brand" error={errors.brand}>
-          <input className="input" value={form.brand} onChange={(e)=>set("brand")(e.target.value)} />
+          <input
+            className="input"
+            value={form.brand}
+            onChange={(e) => set("brand")(e.target.value)}
+          />
         </Field>
         <Field label="Serial" error={errors.serial}>
-          <input className="input" value={form.serial} onChange={(e)=>set("serial")(e.target.value)} />
+          <input
+            className="input"
+            value={form.serial}
+            onChange={(e) => set("serial")(e.target.value)}
+          />
         </Field>
         <Field label="Barcode" error={errors.barcode}>
-          <input className="input" inputMode="numeric" value={form.barcode} onChange={(e)=>set("barcode")(e.target.value)} placeholder="Digits" />
+          <input
+            className="input"
+            inputMode="numeric"
+            value={form.barcode}
+            onChange={(e) => set("barcode")(e.target.value)}
+            placeholder="Digits"
+          />
         </Field>
         <Field label="Location" error={errors.location}>
-          <input className="input" value={form.location} onChange={(e)=>set("location")(e.target.value)} />
+          <input
+            className="input"
+            value={form.location}
+            onChange={(e) => set("location")(e.target.value)}
+          />
         </Field>
-        <DateInput label="Date Last Serviced" value={form.dateLastServiced} onChange={set("dateLastServiced")} />
+        <DateInput
+          label="Date Last Serviced"
+          value={form.dateLastServiced}
+          onChange={set("dateLastServiced")}
+        />
       </div>
 
-      <ScannerModal open={openScan} onClose={() => setOpenScan(false)} onDetected={(val) => set("barcode")(val)} />
+      <ScannerModal
+        open={openScan}
+        onClose={() => setOpenScan(false)}
+        onDetected={(val) => set("barcode")(val)}
+      />
     </div>
   );
 }
