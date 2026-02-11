@@ -6,7 +6,7 @@ export default defineConfig(({
   mode,
 }) => {
   // For GitHub Pages: set BASE_PATH to "/<repo-name>/" if deploying to /<repo>/
-  const base = process.env.BASE_PATH || "/";
+  const base = "/horntrax_v3.0/" || "/";
   return {
     base,
     plugins: [
