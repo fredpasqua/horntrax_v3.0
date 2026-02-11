@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="24" fill="#0b0b0e"/>
+  <path d="M28 88V40h10v48H28zm20 0V40h10v48H48zm20 0V40h10v48H68zm20 0V40h10v48H88z" fill="#ffffff" opacity="0.9"/>
+  <text x="64" y="112" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="14" fill="#ffffff" text-anchor="middle">HornTrax</text>
+</svg>
