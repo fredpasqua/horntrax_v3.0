@@ -87,9 +87,9 @@ export default function EditLoaner({ loaners, onSaved, onDeleted, onToast }){
       <div className="spread">
         <div>
           <div style={{ fontWeight: 900, fontSize: 20 }}>Edit Loaner</div>
-          <div style={{ color: "var(--muted)", marginTop: 6 }}>
+          {/* <div style={{ color: "var(--muted)", marginTop: 6 }}>
             ID: {item._id}
-          </div>
+          </div> */}
         </div>
         <div className="row">
           <button type="button" className="btn" onClick={() => nav("/")}>
