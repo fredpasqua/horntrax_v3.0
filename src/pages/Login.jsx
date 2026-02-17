@@ -57,12 +57,12 @@ export default function Login({ onAuthed, onToast }){
 
       <div className="grid cols2">
         <Field label="Username" error={errors.username}>
-          <input className="input" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder="fredp" autoCapitalize="none" />
+          <input className="input" value={username} onChange={(e)=>setUsername(e.target.value)} placeholder="username" autoCapitalize="none" />
         </Field>
 
         {mode === "register" ? (
           <Field label="Email" error={errors.email}>
-            <input className="input" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="fredp@nemc.com" autoCapitalize="none" />
+            <input className="input" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="someone@email.com" autoCapitalize="none" />
           </Field>
         ) : (
           <div />
