@@ -1,11 +1,11 @@
 :root{
-  --bg:#0b0b0e;
-  --card:#13131a;
-  --text:#f2f2f4;
-  --muted:#a8a8b3;
+  --bg:#e6e6fc;
+  --card:#4f9ff4;
+  --text:#000000;
+  --muted:#19191e;
   --border:#262633;
   --accent:#7dd3fc;
-  --danger:#ff5a6a;
+  --danger:#f65b6a;
   --ok:#34d399;
   --shadow: 0 10px 30px rgba(0,0,0,.35);
   color-scheme: dark;
@@ -17,7 +17,7 @@ a{color:inherit;text-decoration:none}
 .container{max-width:1040px;margin:0 auto;padding:18px}
 .topbar{
   display:flex;align-items:center;justify-content:space-between;gap:12px;
-  position:sticky;top:0;background:linear-gradient(to bottom, rgba(11,11,14,.95), rgba(11,11,14,.75));
+  position:sticky;top:0;background:linear-gradient(to bottom, rgba(238, 161, 103, 0.973), rgba(217, 217, 251, 0.75));
   backdrop-filter: blur(10px);
   border-bottom:1px solid var(--border);
   padding:14px 18px;
@@ -34,23 +34,24 @@ a{color:inherit;text-decoration:none}
 .grid{display:grid;gap:14px}
 .btn{
   border:1px solid var(--border);
-  background:#111119;
+  background:var(--bg);
   color:var(--text);
   padding:10px 12px;border-radius:12px;
   font-weight:800;
   cursor:pointer;
 }
-.btn.primary{background:var(--accent); color:#061018; border-color:transparent}
-.btn.danger{background:transparent;border-color:rgba(255,90,106,.5);color:#ffd2d7}
+.btn.primary{background:var(--bg); background-color: var(--bg);border-color:var(--border)}
+.btn.danger{background:var(--danger);border-color:rgba(0, 0, 0, 0.5);color:#fff9fa}
 .btn:disabled{opacity:.55;cursor:not-allowed}
 .input{
   width:100%;
   padding:12px 12px;
   border-radius:12px;
   border:1px solid var(--border);
-  background:#0f0f15;
+  background:#d6d6fb;
   color:var(--text);
   outline:none;
+  
 }
 .label{font-size:14px;color:var(--muted);margin-bottom:6px;font-weight:700}
 .field{display:grid;gap:6px}
@@ -64,7 +65,7 @@ a{color:inherit;text-decoration:none}
   border:1px solid var(--border);
   background:rgba(255,255,255,.02);
 }
-.item:hover{border-color:rgba(125,211,252,.35)}
+.item:hover{border-color: var(--card)}
 .item h3{margin:0;font-size:16px}
 .item p{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.25}
 .kv{display:flex;gap:10px;flex-wrap:wrap;}
